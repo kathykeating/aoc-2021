@@ -48,7 +48,6 @@ def determine_increase(list_depth):
 
 def build_ranges(list_depth):
     length = len(list_depth)
-    print length
 
     list_range = []
     for idx, row in enumerate(list_depth):
@@ -56,7 +55,6 @@ def build_ranges(list_depth):
             the_range = int(list_depth[idx]) + int(list_depth[idx+1]) + int(list_depth[idx+2])
             list_range.append(the_range)
     print(list_range)
-    print len(list_range)
     return list_range
 
 
@@ -64,12 +62,12 @@ def build_ranges(list_depth):
 if __name__ == '__main__':
     depth = read_sea_depth()
     increase = determine_increase(depth)
-    print("Sea Depth Change=%d", increase) # 1564
+    print('Sea Depth Change = {0}'.format(increase))  # 1564
 
     # three count ranges
     ranges = build_ranges(depth)
     increase = determine_increase(ranges)
-    print("Sea Depth Range Change=%d", increase)
+    print('Sea Depth Range Change = {0}'.format(increase))  # 1611
 
 
 # See PyCharm help at https://www.jetbrains.com/help/pycharm/
