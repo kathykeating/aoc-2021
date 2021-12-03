@@ -47,7 +47,7 @@ def main_day1():
     # DAY 1 ----------------------------------------------------------
     print('***** DAY 1 *****')
     # calculate the full increase across the depth
-    depth = utils.read_file("sea_depth.csv", "field", ',')
+    depth = utils.read_file("./data/sea_depth.csv", "field", ',')
     #  print(depth)
     increase = determine_increase(depth)
     print('Sea Depth Change = {0}'.format(increase))  # 1564

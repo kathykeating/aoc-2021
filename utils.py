@@ -13,3 +13,6 @@ def read_file(file_name, type, delimit):
         else:
             the_list.append(row[0])
     return the_list
+
+
+
