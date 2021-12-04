@@ -1,15 +1,14 @@
 # coding=utf-8
 # Advent of Code 2021
 import sys, getopt
-import day1, day2, day3, day4
+import day1, day2, day3
 
 
 def main(argv):
-    path = ''
     try:
         opts, args = getopt.getopt(argv,"d:",["runday="])
     except getopt.GetoptError:
-        print 'main.py -d <runday>'
+        print ('main.py -d <runday>')
         sys.exit(2)
     for opt, arg in opts:
         if opt in ("-d", "--runday") and arg.isdigit():
