@@ -15,4 +15,18 @@ def read_file(file_name, type, delimit):
     return the_list
 
 
+def read_grid_file(file_name, type, delimit):
+    grids = []
+    f = open(file_name, "r")
+    csv_reader = csv.reader(f, delimiter=delimit)
+
+    grid = []
+    for row in csv_reader:
+        if row:
+            item = str(row[0]).replace('  ', ' ').split()
+            grid.append([int(x) for x in item])
+        else:
+            grids.append(grid) # an empty row separates each grid
+            grid = []
+    return grids
 

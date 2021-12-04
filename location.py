@@ -1,5 +1,5 @@
 # coding=utf-8
-# Advent of Code 2021 - Day 1
+# Advent of Code 2021 - Submarine Location
 import utils
 
 class Location:
