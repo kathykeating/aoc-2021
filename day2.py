@@ -14,12 +14,16 @@ def main_day2():
     # print(moves)
 
     # calculate location
-    location = sub.determine_location(moves)
+    sub.location.determine_location(moves)
     print('Location:\n  Forward = {0}\n  Depth = {1}\n  Combined = {2}'
-          .format(location.forward, location.depth, location.forward * location.depth)) # 1524750
+          .format(sub.location.forward,
+                  sub.location.depth,
+                  sub.location.forward * sub.location.depth)) # 1524750
 
     # calculate aim
-    aim = sub.determine_aim(moves)
+    sub.aim.determine_aim(moves)
     print('\nLocation with Aim:\n  Forward = {0}\n  Depth = {1}\n  Combined = {2}'
-          .format(aim.forward, aim.depth, aim.forward * aim.depth))  # 1592426537
+          .format(sub.aim.forward,
+                  sub.aim.depth,
+                  sub.aim.forward * sub.aim.depth))  # 1592426537
 
