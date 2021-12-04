@@ -1,7 +1,7 @@
 # coding=utf-8
 # Advent of Code 2021
 import sys, getopt
-import day1, day2, day3
+import day1, day2, day3, day4
 
 
 def main(argv):
