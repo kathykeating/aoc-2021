@@ -1,7 +1,7 @@
 # coding=utf-8
 # Advent of Code 2021 - Day 6
 import utils, sys, csv
-import submarine, fish
+import submarine
 
 def main_day6():
     sub = submarine.Submarine()
