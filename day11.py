@@ -3,30 +3,6 @@
 import utils, sys, csv
 import submarine
 
-
-
-def get_data(filename):
-    with open(filename) as file:
-        string_list = file.read().splitlines()
-
-    data = [[0] for x in range(len(string_list))]
-    for n, line in enumerate(string_list):
-        data[n] = list(map(int, [char for char in line]))
-        # data[n] = [char for char in line]
-    return data
-
-
-def view_octopus(round, octopi):
-    print "\n** {0} **".format(round)
-    for row in octopi:
-        print ''.join([str(x) for x in row])
-
-def reset_octopus(octopi):
-    for row, line in enumerate(octopi):
-        for col, char in enumerate(line):
-            if octopi[row][col] == 'X':
-                octopi[row][col] = 0
-
 def main_day11():
     sub = submarine.Submarine()
     octopus = get_data("./data/dumbo_octopus.txt")
@@ -50,6 +26,30 @@ def main_day11():
     view_octopus(n, octopus)
     print "Synchronicity"
     print " Count of Flashes = {0}".format(n) # 519
+
+
+def get_data(filename):
+    with open(filename) as file:
+        string_list = file.read().splitlines()
+
+    data = [[0] for x in range(len(string_list))]
+    for n, line in enumerate(string_list):
+        data[n] = list(map(int, [char for char in line]))
+        # data[n] = [char for char in line]
+    return data
+
+
+def view_octopus(round, octopi):
+    print "\n** {0} **".format(round)
+    for row in octopi:
+        print ''.join([str(x) for x in row])
+
+
+def reset_octopus(octopi):
+    for row, line in enumerate(octopi):
+        for col, char in enumerate(line):
+            if octopi[row][col] == 'X':
+                octopi[row][col] = 0
 
 
 def observe(rotation, octopus):
