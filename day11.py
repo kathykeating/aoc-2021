@@ -35,7 +35,6 @@ def get_data(filename):
     data = [[0] for x in range(len(string_list))]
     for n, line in enumerate(string_list):
         data[n] = list(map(int, [char for char in line]))
-        # data[n] = [char for char in line]
     return data
 
 
